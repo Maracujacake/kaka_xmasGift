@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Adicione os links para o CSS e o script do Slick Carousel -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte fofa */
+            background-image: url('xmasBack.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: background-image 0.3s ease; /* Transição suave */
+        }
+
+        #login-container {
+            background: rgba(255, 255, 255, 0.7); /* Fundo branco semi-transparente */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+            transition: background 0.3s ease; /* Transição suave */
+            margin-bottom: 20px; /* Adiciona espaço abaixo do login-container */
+        }
+
+        #login-container:hover {
+            background: #fff; /* Cor branca */
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc; /* Borda cinza */
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            color: #ff66b2; /* Cor rosa fofo */
+        }
+
+        #login-button {
+            background-color: #ff66b2; /* Rosa fofo */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+        }
+
+        #login-button:hover {
+            background-color: #ff4040; /* Vermelho */
+            color: #fff; /* Branco */
+        }
+
+        #new-background {
+            background-image: url('top.gif'); /* Nova imagem de fundo após o login */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            display: none;
+        }
+
+        #new-background h2 {
+            font-size: 36px;
+            color: #fff; /* Cor branca */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra suave para o texto */
+            margin-bottom: 20px; /* Adiciona espaço abaixo do texto */
+        }
+
+        #new-background p:hover {
+            background: rgba(0, 0, 0, 0.5); /* Fundo branco semi-transparente ao passar o mouse */
+            border-radius: 10px; /* Borda arredondada */
+            transition: background 0.3s ease; /* Transição suave */
+        }
+
+        #photo-page {
+            max-width: 800px; /* Aumenta a largura máxima das imagens */
+            margin: 20px 0;
+        }
+
+        .carousel img {
+            height: 250px; /* Altura fixa para manter o mesmo tamanho para todas as imagens */
+            width: auto; /* Largura automática para manter a proporção original */
+            margin-right: 10px; /* Adiciona espaçamento entre as imagens */
+        }
+
+        .slick-prev, .slick-next {
+            font-size: 24px;
+            color: #ff66b2; /* Cor rosa fofo */
+        }
+
+        .slick-prev:hover, .slick-next:hover {
+            color: #ff4040; /* Vermelho para o efeito de brilho */
+        }
+
+        .slick-prev {
+            left: -30px;
+        }
+
+        .slick-next {
+            right: -30px;
+        }
+
+        .slick-dots li button:before {
+            color: #ff66b2; /* Cor rosa fofo para os pontos indicadores */
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: #ff4040; /* Vermelho para o ponto indicador ativo */
+        }
+    </style>
+</head>
+<body>
+    <!-- Adicione isto antes do fechamento da tag </body> -->
+    <div id="login-container">
+        <h2 style="color: #ff66b2;">Descubra a senha</h2> <!-- Título rosa fofo -->
+        <p  style="color: #f71184;">Dica: É uma data muito especial para mim</p>
+        <input type="password" id="password" placeholder="Digite a senha">
+        <br>
+        <button onclick="checkPassword()" id="login-button">Login</button>
+    </div>
+
+    <div id="new-background">
+        <p style="color: #ffb9dc;">
+            Querida Rabuchas,
+            
+            Neste momento mágico de Natal, quero expressar minha imensa gratidão por ter você em minha vida. À medida que o ano vai chegando ao fim, fica impossível não refletir sobre os momentos maravilhosos que compartilhamos.
+            
+            Agradeço sinceramente por cada risada, por cada abraço reconfortante e por todas as experiências que tornaram este ano tão especial. As memórias que construímos juntos são tesouros que guardarei para sempre em meu coração.
+            
+            Neste Natal, desejo a você alegria, paz e amor. Que os próximos dias sejam repletos de calor humano, boas energias e momentos de felicidade junto à pessoas importantes para você.
+            
+            Que a magia do Natal envolva você com carinho e renove nossas esperanças para o futuro.
+            
+            Feliz Natal, querida Rabicó. Que esta época festiva traga consigo a magia dos nossos melhores momentos e a promessa de um ano novo repleto de realizações.
+            
+            Com carinho,
+            polipoli
+        </p>
+
+        <div id="photo-page" class="carousel">
+            <img src="1.jpg" alt="Foto 1">
+            <img src="1_5.webp" alt="Foto 2">
+            <img src="2.jpg" alt="Foto 3">
+            <img src="2_5.webp" alt="Foto 4">
+            <img src="3.jpg" alt="Foto 5">
+            <img src="3_5.webp" alt="Foto 6">
+            <img src="4.jpg" alt="Foto 7">
+            <img src="4_5.gif" alt="Foto 8">
+            <img src="5.jpg" alt="Foto 9">
+            <img src="5_5.gif" alt="Foto 8">
+            <img src="6.jpg" alt="Foto 9">
+            <img src="6_5.gif" alt="Foto 9">
+            <img src="7.jpg" alt="Foto 9">
+            <img src="7_5.gif" alt="Foto 9">
+            <img src="8.jpg" alt="Foto 9">
+            <img src="8_5.gif" alt="Foto 9">
+            <!-- Adicione quantas fotos desejar -->
+        </div>
+    </div>
+
+    <script>
+        var slickOptions = {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: '<div class="slick-prev">&#9665;</div>',
+            nextArrow: '<div class="slick-next">&#9655;</div>',
+            dots: true,
+            infinite: true
+        };
+        
+
+        function checkPassword() {
+            var password = document.getElementById('password').value;
+
+            if (password === '0403') {
+                document.getElementById('login-container').style.display = 'none';
+                document.getElementById('new-background').style.display = 'flex';
+                playBackgroundMusic();
+                initSlick();
+            } else {
+                alert('Senha incorreta. Tente novamente.');
+            }
+        }
+
+        function playBackgroundMusic() {
+            var audio = new Audio('donutesBlz.mp3');
+            audio.play();
+            
+            // Gradualmente aumenta o volume
+            var volume = 0;
+            var interval = setInterval(function () {
+                volume += 0.1;
+                audio.volume = volume;
+
+                if (volume >= 1) {
+                    clearInterval(interval);
+                }
+            }, 1000);
+        }
+
+        function playBackgroundMusic2() {
+            var audio = new Audio('CadeOCapuccino.mp3');
+            audio.play();
+        }
+
+        function initSlick() {
+            $('.carousel').slick(slickOptions);
+        }
+    </script>
+</body>
+</html>
