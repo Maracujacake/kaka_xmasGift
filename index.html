@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="xmastree.jpg" sizes="48x48" type="image/png">
     <title>Feliz Natal!</title>
-    <!-- Adicione os links para o CSS e o script do Slick Carousel -->
+    <!--Link para importação do carousel.-->>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!--Possíveis dependências-->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <style>
+/*Estilização geral PRE-LOGIN*/
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fonte fofa */
+            font-family: 'Comic Sans MS', cursive, sans-serif; 
             background-image: url('xmasBack.jpg');
             background-size: cover;
             background-position: center;
@@ -25,57 +27,57 @@
             align-items: center;
             justify-content: center;
             color: white;
-            transition: background-image 0.3s ease; /* Transição suave */
+            transition: background-image 0.3s ease; 
         }
 
         body.logged-in {
         background-image: url('top.gif') !important;
         background-size: cover;
         background-position: center;
-        transition: background-image 0.3s ease; /* Transição suave */
+        transition: background-image 0.3s ease; 
     }
 
         #login-container {
-            background: rgba(255, 255, 255, 0.7); /* Fundo branco semi-transparente */
+            background: rgba(255, 255, 255, 0.7); 
             padding: 20px;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
-            transition: background 0.3s ease; /* Transição suave */
-            margin-bottom: 20px; /* Adiciona espaço abaixo do login-container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+            transition: background 0.3s ease; 
+            margin-bottom: 20px; 
         }
 
         #login-container:hover {
-            background: #fff; /* Cor branca */
+            background: #fff; 
         }
 
         input {
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid #ccc; /* Borda cinza */
+            border: 1px solid #ccc; 
             border-radius: 5px;
             width: 100%;
             box-sizing: border-box;
-            color: #ff66b2; /* Cor rosa fofo */
+            color: #ff66b2; 
         }
 
         #login-button {
-            background-color: #ff66b2; /* Rosa fofo */
+            background-color: #ff66b2; 
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+            transition: background-color 0.3s ease, color 0.3s ease; 
         }
 
         #login-button:hover {
-            background-color: #ff4040; /* Vermelho */
-            color: #fff; /* Branco */
+            background-color: #ff4040; 
+            color: #fff; 
         }
 
         #new-background {
-            background-image: url('top.gif'); /* Nova imagem de fundo após o login */
+            background-image: url('top.gif'); 
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -89,32 +91,32 @@
         }
 
         #new-background h2 {
-            font-size: 36px;
-            color: #fff; /* Cor branca */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra suave para o texto */
-            margin-bottom: 20px; /* Adiciona espaço abaixo do texto */
+            font-size: 32px;
+            color: #fff; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+            margin-top: 15%;
         }
 
         #new-background p{
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra suave para o texto */
-            margin: 20px 20px 20px 20px; /* Adiciona espaço abaixo do texto */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+            margin: 20px 20px 20px 20px; 
         }
 
         #new-background p:hover {
-            background: rgba(0, 0, 0, 0.5); /* Fundo branco semi-transparente ao passar o mouse */
-            border-radius: 10px; /* Borda arredondada */
-            transition: background 0.3s ease; /* Transição suave */
+            background: rgba(0, 0, 0, 0.5); 
+            border-radius: 10px; 
+            transition: background 0.3s ease; 
         }
 
         #photo-page {
-            max-width: 800px; /* Aumenta a largura máxima das imagens */
+            max-width: 800px; 
             margin: 20px 0;
         }
 
         .carousel img {
-            height: 250px; /* Altura fixa para manter o mesmo tamanho para todas as imagens */
-            width: auto; /* Largura automática para manter a proporção original */
-            margin-right: 10px; /* Adiciona espaçamento entre as imagens */
+            height: 250px; 
+            width: auto; 
+            margin-right: 10px; 
         }
 
         @media screen and (max-width: 1200px) {
@@ -133,9 +135,9 @@
     </style>
 </head>
 <body>
-    <!-- Adicione isto antes do fechamento da tag </body> -->
+
     <div id="login-container">
-        <h2 style="color: #ff66b2;">Descubra a senha</h2> <!-- Título rosa fofo -->
+        <h2 style="color: #ff66b2;">Descubra a senha</h2> 
         <p  style="color: #f71184;">Dica: É uma data muito especial para mim</p>
         <input type="password" id="password" placeholder="Digite a senha">
         <br>
@@ -143,6 +145,8 @@
     </div>
 
     <div id="new-background">
+
+        <h2 style="color: #ffb9dc;"> Nossa cápsula do tempo.</h2>
         <p style="color: #ffb9dc;">
             Querida Rabuchas,
             
@@ -170,14 +174,13 @@
             <img src="4.jpg" alt="Foto 7">
             <img src="4_5.gif" alt="Foto 8">
             <img src="5.jpg" alt="Foto 9">
-            <img src="5_5.gif" alt="Foto 8">
-            <img src="6.jpg" alt="Foto 9">
-            <img src="6_5.gif" alt="Foto 9">
-            <img src="7.jpg" alt="Foto 9">
-            <img src="7_5.gif" alt="Foto 9">
-            <img src="8.jpg" alt="Foto 9">
-            <img src="8_5.gif" alt="Foto 9">
-            <!-- Adicione quantas fotos desejar -->
+            <img src="5_5.gif" alt="Foto 10">
+            <img src="6.jpg" alt="Foto 11">
+            <img src="6_5.gif" alt="Foto 12">
+            <img src="7.jpg" alt="Foto 13">
+            <img src="7_5.gif" alt="Foto 14">
+            <img src="8.jpg" alt="Foto 15">
+            <img src="8_5.gif" alt="Foto 16">
         </div>
     </div>
 
@@ -195,7 +198,7 @@
         function checkPassword() {
             var password = document.getElementById('password').value;
 
-            if (password === '0403') {
+            if (password === '0403') { // Que dia mais seria? hehe.
                 document.getElementById('login-container').style.display = 'none';
                 document.getElementById('new-background').style.display = 'flex';
                 playBackgroundMusic();
@@ -203,7 +206,7 @@
 
                 document.body.classList.add('logged-in');
             } else {
-                alert('Senha incorreta. Tente novamente.');
+                alert('Senha incorreta. Tente novamente. :)');
             }
         }
 
@@ -223,6 +226,7 @@
             }, 1000);
         }
 
+        /*Música a ser adicionada na tela pré-login*/
         function playBackgroundMusic2() {
             var audio = new Audio('CadeOCapuccino.mp3');
             audio.play();
