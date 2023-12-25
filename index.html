@@ -28,6 +28,13 @@
             transition: background-image 0.3s ease; /* Transição suave */
         }
 
+        body.logged-in {
+        background-image: url('top.gif') !important;
+        background-size: cover;
+        background-position: center;
+        transition: background-image 0.3s ease; /* Transição suave */
+    }
+
         #login-container {
             background: rgba(255, 255, 255, 0.7); /* Fundo branco semi-transparente */
             padding: 20px;
@@ -88,6 +95,11 @@
             margin-bottom: 20px; /* Adiciona espaço abaixo do texto */
         }
 
+        #new-background p{
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra suave para o texto */
+            margin: 20px 20px 20px 20px; /* Adiciona espaço abaixo do texto */
+        }
+
         #new-background p:hover {
             background: rgba(0, 0, 0, 0.5); /* Fundo branco semi-transparente ao passar o mouse */
             border-radius: 10px; /* Borda arredondada */
@@ -105,30 +117,19 @@
             margin-right: 10px; /* Adiciona espaçamento entre as imagens */
         }
 
-        .slick-prev, .slick-next {
-            font-size: 24px;
-            color: #ff66b2; /* Cor rosa fofo */
+        @media screen and (max-width: 1200px) {
+            #new-background p{
+                align-items: center;
+                margin: 50 auto;
+            }
+
+            #photo-page{
+                align-items: center;
+                max-width: 715px;
+                margin: 0 auto;
+            }
         }
 
-        .slick-prev:hover, .slick-next:hover {
-            color: #ff4040; /* Vermelho para o efeito de brilho */
-        }
-
-        .slick-prev {
-            left: -30px;
-        }
-
-        .slick-next {
-            right: -30px;
-        }
-
-        .slick-dots li button:before {
-            color: #ff66b2; /* Cor rosa fofo para os pontos indicadores */
-        }
-
-        .slick-dots li.slick-active button:before {
-            color: #ff4040; /* Vermelho para o ponto indicador ativo */
-        }
     </style>
 </head>
 <body>
@@ -199,6 +200,8 @@
                 document.getElementById('new-background').style.display = 'flex';
                 playBackgroundMusic();
                 initSlick();
+
+                document.body.classList.add('logged-in');
             } else {
                 alert('Senha incorreta. Tente novamente.');
             }
