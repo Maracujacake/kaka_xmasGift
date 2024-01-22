@@ -5,133 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="xmastree.jpg" sizes="48x48" type="image/png">
     <title>Feliz Natal!</title>
-    <!--Link para importação do carousel.-->>
+    <!--Link para importação do carousel.-->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!--Possíveis dependências-->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 
     <style>
 /*Estilização geral PRE-LOGIN*/
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Comic Sans MS', cursive, sans-serif; 
-            background-image: url('xmasBack.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            transition: background-image 0.3s ease; 
-        }
-
-        body.logged-in {
-        background-image: url('top.gif') !important;
-        background-size: cover;
-        background-position: center;
-        transition: background-image 0.3s ease; 
-    }
-
-        #login-container {
-            background: rgba(255, 255, 255, 0.7); 
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-            transition: background 0.3s ease; 
-            margin-bottom: 20px; 
-        }
-
-        #login-container:hover {
-            background: #fff; 
-        }
-
-        input {
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc; 
-            border-radius: 5px;
-            width: 100%;
-            box-sizing: border-box;
-            color: #ff66b2; 
-        }
-
-        #login-button {
-            background-color: #ff66b2; 
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, color 0.3s ease; 
-        }
-
-        #login-button:hover {
-            background-color: #ff4040; 
-            color: #fff; 
-        }
-
-        #new-background {
-            background-image: url('top.gif'); 
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-            display: none;
-        }
-
-        #new-background h2 {
-            font-size: 32px;
-            color: #fff; 
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-            margin-top: 15%;
-        }
-
-        #new-background p{
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-            margin: 20px 20px 20px 20px; 
-        }
-
-        #new-background p:hover {
-            background: rgba(0, 0, 0, 0.5); 
-            border-radius: 10px; 
-            transition: background 0.3s ease; 
-        }
-
-        #photo-page {
-            max-width: 800px; 
-            margin: 20px 0;
-        }
-
-        .carousel img {
-            height: 250px; 
-            width: auto; 
-            margin-right: 10px; 
-        }
-
-        @media screen and (max-width: 1200px) {
-            #new-background p{
-                align-items: center;
-                margin: 50 auto;
-            }
-
-            #photo-page{
-                align-items: center;
-                max-width: 715px;
-                margin: 0 auto;
-            }
-        }
-
     </style>
 </head>
 <body>
@@ -144,45 +27,50 @@
         <button onclick="checkPassword()" id="login-button">Login</button>
     </div>
 
-    <div id="new-background">
-
-        <h2 style="color: #ffb9dc;"> Nossa cápsula do tempo.</h2>
-        <p style="color: #ffb9dc;">
-            Querida Rabuchas,
-            
-            Neste momento mágico de Natal, quero expressar minha imensa gratidão por ter você em minha vida. À medida que o ano vai chegando ao fim, fica impossível não refletir sobre os momentos maravilhosos que compartilhamos.
-            
-            Agradeço sinceramente por cada risada, por cada abraço reconfortante e por todas as experiências que tornaram este ano tão especial. As memórias que construímos juntos são tesouros que guardarei para sempre em meu coração.
-            
-            Neste Natal, desejo a você alegria, paz e amor. Que os próximos dias sejam repletos de calor humano, boas energias e momentos de felicidade junto à pessoas importantes para você.
-            
-            Que a magia do Natal envolva você com carinho e renove nossas esperanças para o futuro.
-            
-            Feliz Natal, querida Rabicó. Que esta época festiva traga consigo a magia dos nossos melhores momentos e a promessa de um ano novo repleto de realizações.
-            
-            Com carinho,
-            polipoli
-        </p>
-
-        <div id="photo-page" class="carousel">
-            <img src="1.jpg" alt="Foto 1">
-            <img src="1_5.webp" alt="Foto 2">
-            <img src="2.jpg" alt="Foto 3">
-            <img src="2_5.webp" alt="Foto 4">
-            <img src="3.jpg" alt="Foto 5">
-            <img src="3_5.webp" alt="Foto 6">
-            <img src="4.jpg" alt="Foto 7">
-            <img src="4_5.gif" alt="Foto 8">
-            <img src="5.jpg" alt="Foto 9">
-            <img src="5_5.gif" alt="Foto 10">
-            <img src="6.jpg" alt="Foto 11">
-            <img src="6_5.gif" alt="Foto 12">
-            <img src="7.jpg" alt="Foto 13">
-            <img src="7_5.gif" alt="Foto 14">
-            <img src="8.jpg" alt="Foto 15">
-            <img src="8_5.gif" alt="Foto 16">
+    <div class="newBackground" id="new-background">
+        
+        <div class="h2NewBackground">
+            <h2 style="color: #ffb9dc;"> Nossa cápsula do tempo.</h2>
         </div>
-    </div>
+        <div class="textoLogged">
+            <p style="color: #ffb9dc;">
+                Querida Rabuchas,
+                
+                Neste momento mágico de Natal, quero expressar minha imensa gratidão por ter você em minha vida. À medida que o ano vai chegando ao fim, fica impossível não refletir sobre os momentos maravilhosos que compartilhamos.
+                
+                Agradeço sinceramente por cada risada, por cada abraço reconfortante e por todas as experiências que tornaram este ano tão especial. As memórias que construímos juntos são tesouros que guardarei para sempre em meu coração.
+                
+                Neste Natal, desejo a você alegria, paz e amor. Que os próximos dias sejam repletos de calor humano, boas energias e momentos de felicidade junto à pessoas importantes para você.
+                
+                Que a magia do Natal envolva você com carinho e renove nossas esperanças para o futuro.
+                
+                Feliz Natal, querida Rabicó. Que esta época festiva traga consigo a magia dos nossos melhores momentos e a promessa de um ano novo repleto de realizações.
+                
+                Com carinho,
+                polipoli
+            </p>
+        </div><!--textoLogged-->
+        <div class="carouselDiv">
+            <div id="photo-page" class="carousel">
+                <img src="1.jpg" alt="Foto 1">
+                <img src="1_5.webp" alt="Foto 2">
+                <img src="2.jpg" alt="Foto 3">
+                <img src="2_5.webp" alt="Foto 4">
+                <img src="3.jpg" alt="Foto 5">
+                <img src="3_5.webp" alt="Foto 6">
+                <img src="4.jpg" alt="Foto 7">
+                <img src="4_5.gif" alt="Foto 8">
+                <img src="5.jpg" alt="Foto 9">
+                <img src="5_5.gif" alt="Foto 10">
+                <img src="6.jpg" alt="Foto 11">
+                <img src="6_5.gif" alt="Foto 12">
+                <img src="7.jpg" alt="Foto 13">
+                <img src="7_5.gif" alt="Foto 14">
+                <img src="8.jpg" alt="Foto 15">
+                <img src="8_5.gif" alt="Foto 16">
+            </div><!--carousel-->
+        </div>
+    </div><!--new-background-->
 
     <script>
         var slickOptions = {
@@ -190,10 +78,19 @@
             slidesToScroll: 1,
             prevArrow: '<div class="slick-prev">&#9665;</div>',
             nextArrow: '<div class="slick-next">&#9655;</div>',
-            dots: true,
+            dots: false,
             infinite: true
         };
-        
+
+        function updateSlickOptions() {
+            if (window.innerWidth <= 700) {
+                slickOptions.slidesToShow = 2;
+            } else {
+                slickOptions.slidesToShow = 3;
+            }
+        }
+
+        updateSlickOptions();
 
         function checkPassword() {
             var password = document.getElementById('password').value;
