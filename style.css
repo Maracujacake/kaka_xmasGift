@@ -253,7 +253,35 @@ input {
 
 /*media screen's*/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
+    .newBackground{
+        max-width: 400px;
+        max-height: 100vh;
+        display: inline-block
+    }
+
+    .h2NewBackground{
+        margin-top: 15%;
+    }
+
+    .carouselDiv{
+        margin-left: 10%;
+        max-width: 550px;
+        padding-bottom: 2%;
+    }
+    
+    .textoLogged{
+        text-align: center;
+        margin: auto;
+    }
+
+    #photo-page{
+        max-width: 200px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 690px) {
     .newBackground{
         max-width: 500px;
         max-height: 100vh;
@@ -279,6 +307,7 @@ input {
         max-width: 200px;
         margin: auto;
     }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -308,5 +337,71 @@ input {
         align-items: center;
         max-width: 715px;
         margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 400px) and (max-height: 390px) {
+    .newBackground{
+        max-width: 400px;
+        max-height: 100vh;
+        display: inline-block
+    }
+
+    .h2NewBackground{
+        padding: 5%;
+        margin-top: 90%;
+    }
+
+    .h2NewBackground h2{
+        padding: 5%;
+        margin-top: 90%;
+    }
+
+    .carouselDiv{
+        max-width: 100px;
+        padding-bottom: 2%;
+    }
+    
+    .textoLogged{
+        text-align: center;
+        margin: auto;
+    }
+
+    #photo-page{
+        max-width: 200px;
+        margin: auto;
+    }
+}
+
+
+@media screen and (max-width: 400px) and (max-height: 690px) {
+    .newBackground{
+        max-width: 400px;
+        max-height: 100vh;
+        display: inline-block
+    }
+
+    .h2NewBackground{
+        padding: 5%;
+        margin-top: 90%;
+    }
+
+    .h2NewBackground h2{
+        margin-top: 15%;
+    }
+
+    .carouselDiv{
+        max-width: 300px;
+        padding-bottom: 2%;
+    }
+    
+    .textoLogged{
+        text-align: center;
+        margin: auto;
+    }
+
+    #photo-page{
+        max-width: 200px;
+        margin: auto;
     }
 }

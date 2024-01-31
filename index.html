@@ -12,10 +12,6 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-/*Estilização geral PRE-LOGIN*/
-    </style>
 </head>
 <body>
 
@@ -82,10 +78,25 @@
             infinite: true
         };
 
+        var prevArrowElement = document.createElement('div');
+        prevArrowElement.className = 'slick-prev';
+
+        var nextArrowElement = document.createElement('div');
+        nextArrowElement.className = 'slick-next';
+
         function updateSlickOptions() {
-            if (window.innerWidth <= 700) {
+            if (window.innerWidth <= 500) {
+                slickOptions.slidesToShow = 1;
+                slickOptions.prevArrow = null;
+                slickOptions.nextArrow = null;
+            }
+            else if(window.innerWidth <= 700){
                 slickOptions.slidesToShow = 2;
-            } else {
+                slickOptions.prevArrow = null;
+                slickOptions.nextArrow = null;
+            }
+
+            else {
                 slickOptions.slidesToShow = 3;
             }
         }
