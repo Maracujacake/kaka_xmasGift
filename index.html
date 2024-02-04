@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="xmastree.jpg" sizes="48x48" type="image/png">
+    <link rel="icon" href="imagens/xmastree.jpg" sizes="48x48" type="image/png">
     <title>Feliz Natal!</title>
     <!--Link para importação do carousel.-->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -27,7 +27,7 @@
         
         <div class="h2NewBackground">
             <h2 style="color: #ffb9dc;"> Nossa cápsula do tempo.</h2>
-        </div>
+        </div><!--h2NewBackground-->
         <div class="textoLogged">
             <p style="color: #ffb9dc;">
                 Querida Rabuchas,
@@ -46,24 +46,26 @@
                 polipoli
             </p>
         </div><!--textoLogged-->
+
+        <img class="coffee" src="imagens/giphy-unscreen.gif">
         <div class="carouselDiv">
             <div id="photo-page" class="carousel">
-                <img src="1.jpg" alt="Foto 1">
-                <img src="1_5.webp" alt="Foto 2">
-                <img src="2.jpg" alt="Foto 3">
-                <img src="2_5.webp" alt="Foto 4">
-                <img src="3.jpg" alt="Foto 5">
-                <img src="3_5.webp" alt="Foto 6">
-                <img src="4.jpg" alt="Foto 7">
-                <img src="4_5.gif" alt="Foto 8">
-                <img src="5.jpg" alt="Foto 9">
-                <img src="5_5.gif" alt="Foto 10">
-                <img src="6.jpg" alt="Foto 11">
-                <img src="6_5.gif" alt="Foto 12">
-                <img src="7.jpg" alt="Foto 13">
-                <img src="7_5.gif" alt="Foto 14">
-                <img src="8.jpg" alt="Foto 15">
-                <img src="8_5.gif" alt="Foto 16">
+                <img src="imagens/1.jpg" alt="Foto 1">
+                <img src="imagens/1_5.webp" alt="Foto 2">
+                <img src="imagens/2.jpg" alt="Foto 3">
+                <img src="imagens/2_5.webp" alt="Foto 4">
+                <img src="imagens/3.jpg" alt="Foto 5">
+                <img src="imagens/3_5.webp" alt="Foto 6">
+                <img src="imagens/4.jpg" alt="Foto 7">
+                <img src="imagens/4_5.gif" alt="Foto 8">
+                <img src="imagens/5.jpg" alt="Foto 9">
+                <img src="imagens/5_5.gif" alt="Foto 10">
+                <img src="imagens/6.jpg" alt="Foto 11">
+                <img src="imagens/6_5.gif" alt="Foto 12">
+                <img src="imagens/7.jpg" alt="Foto 13">
+                <img src="imagens/7_5.gif" alt="Foto 14">
+                <img src="imagens/8.jpg" alt="Foto 15">
+                <img src="imagens/8_5.gif" alt="Foto 16">
             </div><!--carousel-->
         </div>
     </div><!--new-background-->
@@ -103,6 +105,7 @@
 
         updateSlickOptions();
 
+
         function checkPassword() {
             var password = document.getElementById('password').value;
 
@@ -118,9 +121,13 @@
             }
         }
 
+        let isDonutesBlzPlaying = true; // Inicialmente, "donutesBlz" está tocando
+
+        let audioDonutesBlz = new Audio('audios/donutesBlz.mp3');
+        let audioCadeOCapuccino = new Audio('audios/CadeOCapuccino.mp3');
+
         function playBackgroundMusic() {
-            var audio = new Audio('donutesBlz.mp3');
-            audio.play();
+            audioDonutesBlz.play();
             
             // Gradualmente aumenta o volume
             var volume = 0;
@@ -134,11 +141,22 @@
             }, 1000);
         }
 
-        /*Música a ser adicionada na tela pré-login*/
-        function playBackgroundMusic2() {
-            var audio = new Audio('CadeOCapuccino.mp3');
-            audio.play();
+        // /*Música a ser adicionada na tela pré-login*/
+        // function playBackgroundMusic2() {
+        //     var audio = new Audio('audios/CadeOCapuccino.mp3');
+        //     audio.play();
+        // }
+
+        document.querySelector('.coffee').addEventListener('click', function () {
+        // Verificar qual música está tocando no momento
+        if (isDonutesBlzPlaying) {
+            // Se "donutesBlz" estiver tocando, pausar e iniciar "CadeOCapuccino"
+            audioDonutesBlz.pause();
+            audioDonutesBlz.currentTime = 0;
+            audioCadeOCapuccino.play();
+            isDonutesBlzPlaying = false;
         }
+    });
 
         function initSlick() {
             $('.carousel').slick(slickOptions);

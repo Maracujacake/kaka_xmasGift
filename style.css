@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Comic Sans MS', cursive, sans-serif; 
-    background-image: url('xmasBack.jpg');
+    background-image: url('imagens/xmasBack.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -19,7 +19,7 @@ body {
 }
 
 body.logged-in {
-background-image: url('top.gif') !important;
+background-image: url('imagens/top.gif') !important;
 background-size: cover;
 background-position: center;
 transition: background-image 0.3s ease; 
@@ -73,7 +73,7 @@ input {
 }
 
 #new-background {
-    background-image: url('top.gif'); 
+    background-image: url('imagens/top.gif'); 
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -251,6 +251,24 @@ input {
     animation-delay: 0.8s;
 }
 
+.coffee{
+    position: fixed;
+    top: 10px; /* Ajuste conforme necessário para a posição vertical */
+    right: 10px; /* Ajuste conforme necessário para a posição horizontal */
+    width: 100px; /* Ajuste conforme necessário para a largura */
+    height: auto; /* Manter a proporção da imagem */
+    border-radius: 50%; /* Adiciona bordas arredondadas para um visual mais suave */
+    border: 2px solid #ffffff; /* Adiciona uma borda branca */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra */
+    cursor: pointer; /* Adiciona um indicador de cursor ao passar o mouse */
+    transition: 1s;
+}
+
+.coffee:hover{
+    transition: 1s;
+    border: 2px solid #3f2121;
+}
+
 /*media screen's*/
 
 @media screen and (max-width: 400px) {
@@ -279,6 +297,10 @@ input {
         max-width: 200px;
         margin: auto;
     }
+
+    .coffee{
+        border: none;
+    }
 }
 
 @media screen and (max-width: 690px) {
@@ -306,6 +328,10 @@ input {
     #photo-page{
         max-width: 200px;
         margin: auto;
+    }
+
+    .coffee{
+        border: none;
     }
 
 }
